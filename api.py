@@ -8,7 +8,11 @@ def landing_page():
 
 @app.route("/dashboard")
 def dashboard():
+<<<<<<< HEAD
     return render_template('dashboard.html')
+=======
+    return render_template('ÑAÑAAÑÑAÑAÑAÑAÑÑA.html')
+>>>>>>> branch-ticket-3-2
 
 @app.route("/map")
 def map():
