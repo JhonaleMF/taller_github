@@ -21,7 +21,7 @@ def json_to_df(data):
         places['address'].append(street + ' ' + str(number))
     return pd.DataFrame(places)
 
-list_health = ['bichitos de colores súper chulos']
+list_health = ["hospital", "clinic", "doctors"]
 dataframes = []
 for amenity in list_health:
     overpass_url = "http://overpass-api.de/api/interpreter"
@@ -31,8 +31,8 @@ for amenity in list_health:
     (40.40, -3.71,40.54, -3.60);
     out;
     """
-    # the bridge está en el Latitud: 40.421703 Longitud:-3.691725
-    response = request.get(overpass_url, params={'data':
+    # the bridge está en el Latitud: 40.421703 Longitud: -3.691725
+    response = requests.get(overpass_url, params={'data':
     overpass_query})
     try:
         data = response.json()
