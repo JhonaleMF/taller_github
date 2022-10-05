@@ -1,7 +1,7 @@
 import folium
 from folium.plugins import MarkerCluster
 import pandas as pd
-import request
+import requests
 
 def json_to_df(data):
     elements = data['elements']
